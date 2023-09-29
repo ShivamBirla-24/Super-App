@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.register-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* leftArea */
+.leftarea{
+    width: 50%;
+    height: 100%; 
+    background-image: url("../../images/registerPageimg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+}
+
+.textarea{
+    width: 70%;
+    margin: 0 1em 2em 1.25em;
+    color: white;
+    font-family:'Roboto',sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.5em;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+    .textarea{
+        font-size: 40px;
+    }
+}
+
+/* rightArea */
+.rightarea{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.rightarea h1{
+    color: #72DB73;
+    font-family: 'Single Day' , cursive;
+    font-size: 50px;
+}
+
+.rightarea h4{
+    color: white;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.heading-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 50px 0;
+    gap: 10px;
+}
