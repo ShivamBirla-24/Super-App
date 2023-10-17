@@ -1,7 +1,10 @@
 import './Form.css';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Form(){
+
+    const navigate = useNavigate();
 
     let [userDetails,setuserDetails] = useState({
         name:"",
@@ -37,6 +40,8 @@ function Form(){
             localStorage.setItem('username',userDetails.username);
             localStorage.setItem('email',userDetails.email);
             localStorage.setItem('mobile',userDetails.mobile);
+            localStorage.setItem('Login',true);
+            navigate('/categories');
         }
 
     }
