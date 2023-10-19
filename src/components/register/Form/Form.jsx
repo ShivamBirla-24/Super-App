@@ -36,10 +36,7 @@ function Form(){
         }
 
         if(userDetails.name.length!==0 && isValid(/^[a-zA-Z\s]*$/,userDetails.name) && userDetails.username.length!==0 && isValid(/^[a-zA-Z0-9]*$/,userDetails.username) && userDetails.email.length!==0 && isValid(/^(?:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})?$/,userDetails.email) && userDetails.mobile.length!==0 && isValid(/^(?:\d+|)$/,userDetails.mobile) && checkbox){
-            localStorage.setItem('name',userDetails.name);
-            localStorage.setItem('username',userDetails.username);
-            localStorage.setItem('email',userDetails.email);
-            localStorage.setItem('mobile',userDetails.mobile);
+            localStorage.setItem('userDetails',JSON.stringify(userDetails))
             localStorage.setItem('Login',true);
             navigate('/categories');
         }

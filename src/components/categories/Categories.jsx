@@ -112,10 +112,8 @@ function Categories() {
 
   const nextbuttonClick=()=>{
         if(genreSelected.length>=3){
-            for(let i =0;i<genreSelected.length;i++){
-                localStorage.setItem(`category${i}`,genreSelected[i]);
-            }
-            localStorage.setItem('Categoryfilled',true);
+            localStorage.setItem('categoriesChoosed',JSON.stringify(genreSelected));
+            localStorage.setItem('categoryfilled',true);
             navigate('/home')
         }
         else{
